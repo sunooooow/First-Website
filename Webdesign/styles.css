@@ -224,6 +224,36 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.hero.about-section {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.container.about-section__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-image-card {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 30%;
+  height: 500px;
+}
+
+.about-content-card {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 70%;
+  height: 500px;
+}
+
 .values-list {
   list-style: none;
   padding: 0;
