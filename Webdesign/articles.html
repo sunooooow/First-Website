@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles & Blog | CSAV BSED</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="search-bar">
+    <div class="container">
+      <form class="search-bar__form" onsubmit="return false;">
+        <input type="text" class="search-bar__input" placeholder="Search articles..." />
+        <button type="submit" class="search-bar__button">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">CSAV BSED</a>
+      <nav class="header__nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="articles.html" class="active">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Articles & Blog</h1>
+        <p class="page-hero__subtitle">Insights, tips, and industry updates</p>
+      </div>
+    </section>
+
+    <div class="container articles-wrapper">
+      <aside class="articles-sidebar">
+        <nav class="articles-nav">
+          <h3>Categories</h3>
+          <ul class="articles-nav__list">
+            <li><a href="#" class="articles-nav__link active">All Articles</a></li>
+            <li><a href="#" class="articles-nav__link">Web Design</a></li>
+            <li><a href="#" class="articles-nav__link">Development</a></li>
+            <li><a href="#" class="articles-nav__link">SEO</a></li>
+            <li><a href="#" class="articles-nav__link">Digital Marketing</a></li>
+            <li><a href="#" class="articles-nav__link">Technology Trends</a></li>
+          </ul>
+        </nav>
+
+        <div class="articles-sidebar__section">
+          <h3>Recent Posts</h3>
+          <ul class="recent-posts">
+            <li><a href="#">10 Web Design Trends for 2026</a></li>
+            <li><a href="#">React Performance Optimization</a></li>
+            <li><a href="#">Mobile-First Development Guide</a></li>
+            <li><a href="#">SEO Best Practices</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <section class="articles-main">
+        <article class="article-card">
+          <div class="article-card__header">
+            <h2 class="article-card__title">10 Web Design Trends for 2026</h2>
+            <div class="article-card__meta">
+              <span class="article-card__date">May 8, 2026</span>
+              <span class="article-card__category">Web Design</span>
+            </div>
+          </div>
+          <p class="article-card__excerpt">Discover the latest web design trends shaping the digital landscape in 2026. From minimalism to bold typography, explore what's next.</p>
+          <a href="#" class="article-card__link">Read More →</a>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card__header">
+            <h2 class="article-card__title">React Performance Optimization</h2>
+            <div class="article-card__meta">
+              <span class="article-card__date">May 6, 2026</span>
+              <span class="article-card__category">Development</span>
+            </div>
+          </div>
+          <p class="article-card__excerpt">Learn advanced techniques to optimize your React applications for better performance, faster load times, and improved user experience.</p>
+          <a href="#" class="article-card__link">Read More →</a>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card__header">
+            <h2 class="article-card__title">Mobile-First Development Guide</h2>
+            <div class="article-card__meta">
+              <span class="article-card__date">May 4, 2026</span>
+              <span class="article-card__category">Development</span>
+            </div>
+          </div>
+          <p class="article-card__excerpt">A comprehensive guide to mobile-first development approach, best practices, and tools to ensure your web applications work perfectly on all devices.</p>
+          <a href="#" class="article-card__link">Read More →</a>
+        </article>
+
+        <article class="article-card">
+          <div class="article-card__header">
+            <h2 class="article-card__title">SEO Best Practices Guide</h2>
+            <div class="article-card__meta">
+              <span class="article-card__date">May 1, 2026</span>
+              <span class="article-card__category">SEO</span>
+            </div>
+          </div>
+          <p class="article-card__excerpt">Master the fundamentals of SEO with this comprehensive guide covering on-page optimization, technical SEO, and content strategy.</p>
+          <a href="#" class="article-card__link">Read More →</a>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 CSAV BSED. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

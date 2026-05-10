@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSAV EDUCATION DEPARTMENT</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="search-bar">
+    <div class="container">
+      <form class="search-bar__form" onsubmit="return false;">
+        <input type="text" class="search-bar__input" placeholder="Search..." />
+        <button type="submit" class="search-bar__button">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">CSAV EDUCATION DEPARTMENT</a>
+      <nav class="header__nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="articles.html">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="home" class="banner-carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide active">
+          <img src="img/cimg1.jpg" alt="Banner 1" />
+        </div>
+        <div class="carousel-slide">
+          <img src="img/cimg2.jpg" alt="Banner 2" />
+        </div>
+        <div class="carousel-slide">
+          <img src="img/cimg3.jpg" alt="Banner 3" />
+        </div>
+
+        <button class="carousel-control carousel-prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="carousel-control carousel-next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+
+      <div class="carousel-indicators">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+    </section>
+
+    <section id="headline" class="hero">
+      <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <h2 class="hero__subtitle">Create Amazing Digital Experiences</h2>
+        <p class="hero__description">This is a simple homepage layout with a header, navigation, sections, and a footer. Perfect for building modern, responsive websites with clean design principles.</p>
+        <p class="hero__body">Our platform provides everything you need to create engaging web experiences. From intuitive navigation to professional styling, we've got you covered.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>We create clean, modern websites with easy navigation and clear content sections.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <p>Our services include web design, development, and page layout for small businesses.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Reach out to us to start your project or learn more about our work.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 CSAV BSED. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(n) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[n].classList.add('active');
+      dots[n].classList.add('active');
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      showSlide(currentSlide);
+    }
+
+    function goToSlide(n) {
+      currentSlide = n;
+      showSlide(currentSlide);
+    }
+
+    // Auto-advance carousel every 5 seconds
+    setInterval(() => changeSlide(1), 5000);
+  </script>
+</body>
+</html>
