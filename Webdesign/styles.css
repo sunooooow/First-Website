@@ -226,7 +226,7 @@ body {
 
 .hero.about-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2rem;
 }
 
@@ -239,7 +239,7 @@ body {
 .about-image-card {
   background: var(--surface);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 80px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   width: 30%;
   height: 500px;
@@ -248,7 +248,7 @@ body {
 .about-content-card {
   background: var(--surface);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 80px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   width: 70%;
   height: 500px;
