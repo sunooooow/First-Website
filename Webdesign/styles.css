@@ -225,34 +225,35 @@ body {
 }
 
 .hero.about-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  background: linear-gradient(135deg, var(--secondary) 0%, #0d1a3d 100%);
+  color: white;
+  padding: 3rem 0;
 }
 
-.container.about-section__inner {
+/* Make about image + text appear side-by-side */
+.about-section__inner {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  text-align: left;
 }
 
 .about-image-card {
-  background: var(--surface);
-  padding: 2rem;
-  border-radius: 80px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  width: 30%;
-  height: 500px;
+  flex: 0 0 auto;
 }
 
-.about-content-card {
-  background: var(--surface);
-  padding: 2rem;
-  border-radius: 80px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  width: 70%;
-  height: 500px;
+.about-content {
+  flex: 1;
 }
+
+.about-photo {
+  width: 600px;
+  height: auto; /* keeps aspect ratio */
+  display: block;
+}
+
+
 
 .values-list {
   list-style: none;
@@ -539,6 +540,13 @@ body {
   .carousel-slide img {
     height: 400px;
   }
+
+  .about-section__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
 
   .carousel-control {
     padding: 0.75rem 1rem;
