@@ -7,7 +7,12 @@
   --muted: #6b7280;
   --accent: #1D8EFF;
   --secondary: #102759;
+
+  /* Added from your color scheme */
+  --color-cream: #fff7ad;
+  --color-purple: #503f77;
 }
+
 
 * {
   box-sizing: border-box;
@@ -16,7 +21,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', 'Futura', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--bg);
+  background: var(--surface);
   color: var(--text);
   line-height: 1.6;
 }
@@ -26,6 +31,7 @@ body {
   margin: 0 auto;
 }
 
+/* Header styles */
 
 .header {
   background: var(--accent);
@@ -70,10 +76,13 @@ body {
   padding-bottom: 0.25rem;
 }
 
+/* Hero section styles */
+
 .hero {
   padding: 5rem 0 3rem;
-  text-align: center;
+  text-align: left;
 }
+
 
 .hero h1 {
   margin: 0 0 1rem;
@@ -102,6 +111,8 @@ body {
   line-height: 1.8;
 }
 
+/* Carousel styles */
+
 .banner-carousel {
   width: 100%;
   position: relative;
@@ -111,9 +122,12 @@ body {
 .carousel-container {
   position: relative;
   width: 100%;
+  height: 600px;
   max-height: 600px;
   background: #000;
 }
+
+
 
 .carousel-slide {
   display: none;
@@ -188,27 +202,31 @@ body {
 }
 
 .dot.active {
-  background: rgba(255, 255, 255, 1);
+  background: var(--color-cream);
 }
 
+/* Section styles */
+
 .section {
-  background: var(--surface);
+  background: var(--color-cream);
   margin: 1.5rem 0;
   padding: 2rem;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  
 }
 
 .section h2 {
   margin-top: 0;
 }
 
-.page-hero {
+.headlin.page-hero {
   background: linear-gradient(135deg, var(--secondary) 0%, #0d1a3d 100%);
   color: white;
   padding: 3rem 0;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+
 }
+
 
 .page-hero h1 {
   margin: 0 0 0.5rem;
@@ -216,44 +234,30 @@ body {
   color: white;
 }
 
-.page-hero__subtitle {
+.H-hero h1 {
+ font-size: 3rem;
+  color: var(--secondary);
+}
+
+
+/* Backward compatibility if some pages use the old class name */
+.hero-subtitle {
+  margin: 0;
+  font-size: 2rem;
+  opacity: 0.95;
+  font-weight: 400;
+  color: var(--secondary);
+}
+
+
+.hero-description {
   margin: 0;
   font-size: 1.2rem;
   opacity: 0.95;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
 }
 
-.hero.about-section {
-  background: linear-gradient(135deg, var(--secondary) 0%, #0d1a3d 100%);
-  color: white;
-  padding: 3rem 0;
-}
-
-/* Make about image + text appear side-by-side */
-.about-section__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  text-align: left;
-}
-
-.about-image-card {
-  flex: 0 0 auto;
-}
-
-.about-content {
-  flex: 1;
-}
-
-.about-photo {
-  width: 600px;
-  height: auto; /* keeps aspect ratio */
-  display: block;
-}
-
-
+/* Values list styles */
 
 .values-list {
   list-style: none;
@@ -273,14 +277,39 @@ body {
   left: 0;
   color: var(--accent);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.2rem;  
+}
+/*
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+    padding: 3rem 0;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 5rem;
+  border-radius: 10px;
+  
 }
 
-.contact-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
+
+.services-section {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  padding: 2rem 0;
+  color: var(--secondary);
+
+  
 }
+
+
+.service-image {
+  width: 400px;
+  height: auto; /* keeps aspect ratio display: block;*/
+  
+  
+/* Contact section styles */
 
 .contact-form-wrapper {
   background: var(--surface);
@@ -328,7 +357,9 @@ body {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
 }
+
 
 .contact-info h2 {
   margin-top: 0;
@@ -380,6 +411,8 @@ body {
   box-shadow: 0 4px 12px rgba(16, 39, 89, 0.3);
 }
 
+/* Articles section styles */
+
 .articles-wrapper {
   display: grid;
   grid-template-columns: 250px 1fr;
@@ -428,6 +461,8 @@ body {
   border-top: 1px solid #e5e7eb;
 }
 
+/* Recent posts styles */
+
 .recent-posts {
   list-style: none;
   padding: 0;
@@ -448,6 +483,8 @@ body {
 .recent-posts a:hover {
   color: #1d4ed8;
 }
+
+/* Main articles styles */
 
 .articles-main {
   display: flex;
@@ -518,6 +555,8 @@ body {
   text-align: center;
   color: var(--muted);
 }
+
+/* Responsive styles */
 
 @media (max-width: 720px) {
   .header__nav {
