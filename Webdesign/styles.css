@@ -63,12 +63,21 @@ body {
   color: #ffffff;
 }
 
+.header__nav a {
+  padding-bottom: 0.25rem;
+}
+
 .header__nav a.active {
   color: #ffffff;
   font-weight: 600;
-  border-bottom: 2px solid #ffffff;
-  padding-bottom: 0.25rem;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25rem;
 }
+
+
+
 
 .hero {
   position: relative;
@@ -551,9 +560,7 @@ body {
 }
 
 /* --- Outreach (Pinterest-style gallery) --- */
-.outreach-wrapper {
-  margin: 2rem 0;
-}
+
 
 .outreach-header {
   margin-bottom: 1.25rem;
@@ -583,12 +590,14 @@ body {
   display: inline-block;
   width: 100%;
   margin: 0 0 1.25rem;
-  background: var(--surface);
+  background: var(--surface );
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
+  
+  
 }
 
 
@@ -599,7 +608,7 @@ body {
 }
 
 .outreach-card__img {
-  width: 100%;
+  width: 93%;
   height: auto;
   display: block;
   background: #f3f4f6;
@@ -607,6 +616,17 @@ body {
 
 .outreach-card__content {
   padding: 0.75rem 0.9rem 1rem;
+}
+
+
+
+.outreach-card__img {
+  width: 93%;
+  height: auto;
+  display: block;
+  background: #f3f4f6;
+  margin-top: 0;
+  vertical-align: top;
 }
 
 .outreach-card__title {
@@ -618,6 +638,7 @@ body {
 }
 
 .outreach-card__meta {
+
   display: flex;
   gap: 0.6rem;
   align-items: center;
