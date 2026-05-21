@@ -1,8 +1,6 @@
 # TODO
-- [x] Create outreach Pinterest-style gallery layout in `outreach.html`
-- [x] Link outreach items to relevant article pages (use existing pages like `preamble.html`, `article-section.html`, etc.)
-- [x] Add gallery styling to `styles.css` (masonry/pinterest using CSS columns)
-- [x] Ensure responsive behavior for gallery and keep existing site styles working
 
-
+- [x] Inspect `styles.css` for `.P1` spacing rules.
+- [x] Update `.P1` padding to increase vertical spacing by 30%.
+- [ ] Save and reload `index.html` to verify layout.
 

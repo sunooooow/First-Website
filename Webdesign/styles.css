@@ -24,6 +24,7 @@ body {
 .container {
   width: min(1100px, calc(100% - 2rem));
   margin: 0 auto;
+ 
 }
 
 
@@ -129,12 +130,42 @@ body {
    
 }
 
- .P1 {
-  background: var(--surface);
-  padding: 3rem 0;
-  border-bottom: 1px solid #d1d5db;
-  
+.mainH1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.568);
+  color: var(--secondary);
 }
+
+.mainAb {
+  margin: 0 0 1rem;
+  font-size: clamp(1rem, 3vw, 2rem);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.568);
+  color: var(--secondary);
+}
+
+.indeximg1 {
+  width: auto;
+  height: 500px;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.indeximg2 {
+  width: auto;
+  height: 500px;
+  margin-top: 1rem;
+  border-radius: 8px;
+  margin-left: 1rem;
+}
+
+.P1 {
+  background: var(--surface);
+  padding: 3.9rem 0;
+  border-bottom: 1px solid #d1d5db;
+;
+}
+
 
 .section {
   border-bottom: 1px solid #d1d5db;
