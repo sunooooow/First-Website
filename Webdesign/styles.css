@@ -14,12 +14,19 @@
 
 }
 
+.mobile-menu {
+  display: none;
+  background: rgba(5,0,0,0.98);
+  backdrop-filter: blur(20px);
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', 'Futura', -apple-system, 'BlinkMacSystemFont', sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  overflow-x: hidden;
 
 }
 
@@ -29,13 +36,17 @@ body {
  
 }
 
+img {
+  max-width: 100%;
+}
+
 
 img[src="img/csavlogo.png"] {
   width: 100px;
   height: auto;
-  margin-right: -250px;
   background: white;
   border-radius: 50%;
+  flex: 0 0 auto;
 }
 
 .header {
@@ -54,8 +65,9 @@ img[src="img/csavlogo.png"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   padding: 1rem 0;
-  line-height: 0.3;
+  line-height: 1.1;
   
 }
 
@@ -64,10 +76,28 @@ img[src="img/csavlogo.png"] {
   color: #ffffff;
   text-decoration: none;
   text-align: left;
+  min-width: 0;
+  margin-right: auto;
+}
+
+.csavT,
+.csavD {
+  margin: 0;
+}
+
+.csavT {
+  font-size: clamp(1.3rem, 4vw, 2rem);
+}
+
+.csavD {
+  font-size: clamp(0.7rem, 2vw, 0.95rem);
 }
 
 .header__nav {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -133,12 +163,10 @@ img[src="img/csavlogo.png"] {
 .hero__description {
   color: rgba(255, 255, 255, 0.92);
   max-width: 720px;
-  margin: 0 auto 1rem;
+  margin: 0 0 1rem;
   font-size: 1.1rem;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.568);
-  float: left;
   text-align: left;
-  margin-left: 0%;
 }
 
 .hero__body {
@@ -161,18 +189,19 @@ img[src="img/csavlogo.png"] {
   margin: 0 0 1rem;
   font-size: clamp(1rem, 3vw, 2rem);
   text-shadow: 0 2px 12px rgba(0, 68, 255, 0.671);
+  overflow-wrap: anywhere;
 }
 
 .indeximg1 {
-  width: auto;
-  height: 500px;
+  width: min(100%, 360px);
+  height: auto;
   margin-top: 1rem;
   border-radius: 8px;
 }
 
 .indeximg2 {
-  width: auto;
-  height: 500px;
+  width: min(100%, 360px);
+  height: auto;
   margin-top: 1rem;
   border-radius: 8px;
   margin-left: 1rem;
@@ -574,43 +603,143 @@ img[src="img/csavlogo.png"] {
   line-height: 1.6;
 }
 
+.faculty-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faculty-node,
+.faculty-members {
+  width: min(100%, 720px);
+  background: #ffffff;
+  border: 1px solid rgba(20, 0, 136, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(16, 39, 89, 0.08);
+  text-align: center;
+}
+
+.faculty-node {
+  padding: 1.5rem;
+}
+
+.faculty-node--primary {
+  background: var(--secondary);
+  color: white;
+}
+
+.faculty-node--secondary {
+  background: #eef3ff;
+}
+
+.faculty-node__role {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+
+.faculty-node h2,
+.faculty-members h2 {
+  margin: 0;
+}
+
+.faculty-branch {
+  width: 2px;
+  height: 2rem;
+  background: rgba(20, 0, 136, 0.35);
+}
+
+.faculty-members {
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+
+.faculty-members h2 {
+  margin-bottom: 1.25rem;
+  color: var(--secondary);
+}
+
+.faculty-members__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.85rem;
+}
+
+.faculty-member {
+  padding: 0.85rem 1rem;
+  background: #f7feff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 600;
+  text-align: left;
+}
+
 .footer {
   margin-top: 2rem;
   position: relative;
-  padding-bottom: 4.5rem;
+  background: var(--secondary);
+  padding: 3.5rem 0 2rem;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.1fr) minmax(300px, 1fr);
+  gap: 4rem;
+  align-items: start;
+}
+
+.footer__tagline {
+  max-width: 540px;
+  margin: 0 0 1.75rem;
+  color: white;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.footer__columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 3rem;
 }
 
 .footer__nav {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__heading {
+  margin: 0 0 0.25rem;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .footer__nav a {
   color: white;
-  flex: 1;
   font-weight: 600;
-  padding: 0.5rem 0;
-  text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .footer__nav a:hover {
-  color: var(--accent);
+  color: white;
   opacity: 0.9;
+  text-decoration: underline;
 }
 
 .footer__copy {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding-bottom: 1rem;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.8);
+  grid-column: 1 / -1;
+  margin: 3rem 0 0;
+  color: rgba(255, 255, 255, 0.62);
   font-size: 0.95rem;
 }
 
@@ -619,14 +748,12 @@ img[src="img/csavlogo.png"] {
 
 .outreach-header {
   margin-bottom: 1.25rem;
-  margin-left: 200px;
 }
 
 .outreach-gallery {
   column-count: 4;
   column-gap: 1.25rem;
   width: 100%;
-  margin-left: 200px;
   margin-right: auto;
   text-align: center;
 }
@@ -713,27 +840,80 @@ img[src="img/csavlogo.png"] {
 }
 
 @media (max-width: 960px) {
+  .header__inner {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .header__nav {
+    width: 100%;
+    justify-content: center;
+    gap: 0.4rem 0.6rem;
+  }
+
+  .hero {
+    padding: 4.5rem 0 3.5rem;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
   .outreach-gallery {
     column-count: 2;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }
 
 @media (max-width: 720px) {
+  .container {
+    width: min(100% - 1.25rem, 1100px);
+  }
+
+  img[src="img/csavlogo.png"] {
+    width: 42px;
+  }
+
+  .header__inner {
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0;
+    text-align: center;
+  }
+
+  .header__logo {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .csavT {
+    font-size: 1rem;
+  }
+
+  .csavD {
+    font-size: 0.55rem;
+  }
+
   .outreach-gallery {
     column-count: 1;
   }
 
   .header__nav {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.15rem 0.45rem;
   }
 
-
-
-
-
   .header__nav a {
-    font-size: 0.9rem;
+    font-size: clamp(0.52rem, 2.1vw, 0.68rem);
+    padding: 0.2rem 0.1rem;
+    overflow-wrap: anywhere;
   }
 
   .header__nav a.active {
@@ -744,12 +924,37 @@ img[src="img/csavlogo.png"] {
     gap: 0.75rem;
   }
 
-  .footer__nav a {
-    flex: 1 1 40%;
+  .section {
+    padding: 1.5rem 0;
   }
 
-  .section {
-    padding: 1.5rem;
+  .P1 {
+    padding: 2rem 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero__description {
+    font-size: 0.98rem;
+  }
+
+  .mainH1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .indeximg1,
+  .indeximg2 {
+    display: block;
+    width: 100%;
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .about-columns {
@@ -771,8 +976,10 @@ img[src="img/csavlogo.png"] {
     height: 240px;
   }
 
-  .carousel-slide img {
-    height: 400px;
+.carousel-slide img {
+    height: auto;
+    max-height: 60vh;
+    width: 100%;
   }
 
   .carousel-control {
@@ -785,23 +992,75 @@ img[src="img/csavlogo.png"] {
     gap: 2rem;
   }
 
+  .contact-info,
+  .contact-form-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.25rem;
+  }
+
   .articles-wrapper {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .articles-sidebar {
-    order: 2;
+    order: 1;
+    padding: 1rem;
   }
 
   .articles-main {
-    order: 1;
+    order: 2;
   }
 
   .article-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .article-card__title {
     font-size: 1.2rem;
+  }
+
+  .article-card__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .outreach-wrapper {
+    width: 100%;
+  }
+
+  .faculty-node,
+  .faculty-members {
+    width: 100%;
+  }
+
+  .faculty-members {
+    padding: 1rem;
+  }
+
+  .faculty-member {
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .header__nav {
+    gap: 0.15rem 0.35rem;
+  }
+
+  .page-hero,
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .footer__columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer__tagline {
+    font-size: 1.9rem;
   }
 }
