@@ -698,14 +698,14 @@ img[src="img/csavlogo.png"] {
   max-width: 540px;
   margin: 0 0 1.75rem;
   color: white;
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1.15;
-  font-weight: 600;
+  font-size: clamp(2rem, 1vw, 1.4rem);
+  line-height: auto;
+  font-weight: 60;
 }
 
 .footer__columns {
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  grid-template-columns: repeat(2, minmax(140px, 1);
   gap: 3rem;
 }
 
